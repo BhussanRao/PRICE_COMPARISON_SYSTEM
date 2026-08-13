@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Price Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bg-glow"></div>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-wrapper">
+                <span class="logo-icon">⚡</span>
+            </div>
+            <span class="logo-text">SmartCompare<span class="pro-badge">PRO</span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="active">Discover</a>
+            <a href="#">Hot Deals</a>
+            <a href="#">Trackers</a>
+        </div>
+        <div class="nav-actions">
+            <button class="btn-icon">🔔</button>
+            <div class="user-profile"></div>
+        </div>
+    </nav>
+
+    <div class="app-layout">
+        <!-- SIDEBAR -->
+        <aside class="app-sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-label">Categories</h3>
+                <ul id="categoryList">
+                    <li data-category="shoes" class="active">
+                        <span class="nav-icon">👟</span>
+                        <span class="nav-label">Footwear</span>
+                    </li>
+                    <li data-category="phone">
+                        <span class="nav-icon">📱</span>
+                        <span class="nav-label">Smartphones</span>
+                    </li>
+                    <li data-category="laptop">
+                        <span class="nav-icon">💻</span>
+                        <span class="nav-label">Computers</span>
+                    </li>
+                    <li data-category="watch">
+                        <span class="nav-icon">⌚</span>
+                        <span class="nav-label">Watches</span>
+                    </li>
+                    <li data-category="headphones">
+                        <span class="nav-icon">🎧</span>
+                        <span class="nav-label">Audio</span>
+                    </li>
+                    <li data-category="groceries">
+                        <span class="nav-icon">🛒</span>
+                        <span class="nav-label">Groceries</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section promo-card">
+                <h4>Save More!</h4>
+                <p>Unlock premium price tracking tools.</p>
+                <button class="btn-upgrade">Go Pro</button>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="app-main">
+            <div class="hero-header">
+                <h1 class="main-title">The Ultimate <span class="gradient-text">Price Intelligence</span></h1>
+                <p class="main-subtitle">Compare prices across 50+ retailers in milliseconds.</p>
+            </div>
+
+            <div class="search-experience">
+                <div class="pro-search-box">
+                    <div class="search-inner">
+                        <span class="search-leading">🔍</span>
+                        <input type="text" id="searchBox" placeholder="Paste product link or search name...">
+                        <div class="search-shortcuts">
+                            <kbd>Ctrl</kbd> + <kbd>K</kbd>
+                        </div>
+                    </div>
+                    <button id="searchBtn" class="btn-primary">Search Now</button>
+                </div>
+
+                <div class="search-filters" id="controls" style="display: none;">
+                    <div class="filter-pill active">All Results</div>
+                    <div class="filter-pill">Verified Stores</div>
+                    <div class="filter-pill">Free Shipping</div>
+                    
+                    <div class="sort-dropdown">
+                        <select id="sortOrder">
+                            <option value="none">Sort By: Relevance</option>
+                            <option value="asc">Price: Low to High</option>
+                            <option value="desc">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loader" class="loader-pro" style="display: none;">
+                <div class="pulse-ring"></div>
+                <div class="loader-text">Fetching real-time data...</div>
+            </div>
+
+            <section id="results" class="results-grid"></section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
